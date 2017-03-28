@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ee69863d-2a2b-46fc-99f1-83d52e1b9d89" name="Default" comment="" />
+    <list default="true" id="ee69863d-2a2b-46fc-99f1-83d52e1b9d89" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MultipleSequenceAlignment.java" afterPath="$PROJECT_DIR$/src/MultipleSequenceAlignment.java" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,10 +19,12 @@
       <file leaf-file-name="MultipleSequenceAlignment.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MultipleSequenceAlignment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-176">
-              <caret line="30" column="136" lean-forward="false" selection-start-line="30" selection-start-column="136" selection-end-line="30" selection-end-column="136" />
+            <state relative-caret-position="514">
+              <caret line="198" column="1" lean-forward="true" selection-start-line="198" selection-start-column="1" selection-end-line="198" selection-end-column="1" />
               <folding>
+                <element signature="method#calculateSum#0;class#MultipleSequenceAlignment#0" expanded="false" />
                 <element signature="method#sumOfPairs#0;class#MultipleSequenceAlignment#0" expanded="false" />
+                <element signature="method#findMax#0;class#MultipleSequenceAlignment#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -33,6 +38,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -54,10 +62,12 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="676" />
-    <option name="width" value="697" />
-    <option name="height" value="735" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -101,9 +111,9 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -550,15 +560,16 @@
       <workItem from="1490636247906" duration="1197000" />
       <workItem from="1490645850491" duration="1416000" />
       <workItem from="1490647313233" duration="716000" />
-      <workItem from="1490663412236" duration="399000" />
+      <workItem from="1490663412236" duration="1434000" />
+      <workItem from="1490738737146" duration="1561000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11517000" />
+    <option name="totallyTimeSpent" value="14113000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="676" y="0" width="697" height="735" extended-state="1" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -570,8 +581,8 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3296" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3280757" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -600,7 +611,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -614,7 +625,21 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="method#calculateSum#0;class#MultipleSequenceAlignment#0" expanded="false" />
             <element signature="method#sumOfPairs#0;class#MultipleSequenceAlignment#0" expanded="false" />
+            <element signature="method#findMax#0;class#MultipleSequenceAlignment#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MultipleSequenceAlignment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="method#calculateSum#0;class#MultipleSequenceAlignment#0" expanded="false" />
+            <element signature="method#sumOfPairs#0;class#MultipleSequenceAlignment#0" expanded="false" />
+            <element signature="method#findMax#0;class#MultipleSequenceAlignment#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -625,10 +650,12 @@
     <entry file="file://$PROJECT_DIR$/src/MSA.java" />
     <entry file="file://$PROJECT_DIR$/src/MultipleSequenceAlignment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-176">
-          <caret line="30" column="136" lean-forward="false" selection-start-line="30" selection-start-column="136" selection-end-line="30" selection-end-column="136" />
+        <state relative-caret-position="514">
+          <caret line="198" column="1" lean-forward="true" selection-start-line="198" selection-start-column="1" selection-end-line="198" selection-end-column="1" />
           <folding>
+            <element signature="method#calculateSum#0;class#MultipleSequenceAlignment#0" expanded="false" />
             <element signature="method#sumOfPairs#0;class#MultipleSequenceAlignment#0" expanded="false" />
+            <element signature="method#findMax#0;class#MultipleSequenceAlignment#0" expanded="false" />
           </folding>
         </state>
       </provider>

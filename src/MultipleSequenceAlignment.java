@@ -20,25 +20,25 @@ public class MultipleSequenceAlignment {
     public static void computeScore(){
         //====initialization========
         F[0] = 0;
-        //initialize other 0 rows
 
         //====Computation===========
-        for(int i =1; i<8;i++){
-            for(int j =1; j<9; j++){
-                for(int k =1; k<9; k++){
-                    for(int l =1; l<10; l++){
+        for(int i =0; i<8;i++){
+            for(int j =0; j<9; j++){
+                for(int k =0; k<9; k++){
+                    for(int l =0; l<10; l++){
 
-                        double[] S = MultipleSequenceAlignment.calculateSum(i-1, j-1, k-1, l-1); //compare the sequences starting from 0
-                        double m = MultipleSequenceAlignment.findMax(S, i, j, k, l);
-                        F[10*(9*(9*i+j)+k)+l] = m;
+                        if(i!=0 && j!=0 && k!=0 && l!=0) {
+                            double[] S = MultipleSequenceAlignment.calculateSum(i, j, k, l); //compare the sequences starting from 0
+                            double m = MultipleSequenceAlignment.findMax(S, i, j, k, l);
+                            F[10 * (9 * (9 * i + j) + k) + l] = m;
+                        }
                     }
                 }
             }
         }
 
         //====Termination==========
-        System.out.println(F[10*(9*(9*7+8)+8)+9]);
-
+        System.out.println(F[6479]);
     }
 
     // Return a list of sum
@@ -135,21 +135,51 @@ public class MultipleSequenceAlignment {
     public static double findMax(double[] S, int i, int j, int k, int l){
 
         double[] FS = new double[15];
-        FS[0] = F[10*(9*(9*(i-1)+(j-1))+(k-1))+(l-1)] + S[0];
-        FS[1] = F[10*(9*(9*i+(j-1))+(k-1))+(l-1)] + S[1];
-        FS[2] = F[10*(9*(9*(i-1)+j)+(k-1))+(l-1)] + S[2];
-        FS[3] = F[10*(9*(9*(i-1)+(j-1))+k)+(l-1)] + S[3];
-        FS[4] = F[10*(9*(9*(i-1)+(j-1))+(k-1))+l] + S[4];
-        FS[5] = F[10*(9*(9*i+j)+(k-1))+(l-1)] + S[5];
-        FS[6] = F[10*(9*(9*(i-1)+j)+k)+(l-1)] + S[6];
-        FS[7] = F[10*(9*(9*(i-1)+(j-1))+k)+l] + S[7];
-        FS[8] = F[10*(9*(9*i+j)+k)+(l-1)] + S[8];
-        FS[9] = F[10*(9*(9*(i-1)+j)+k)+l] + S[9];
-        FS[10] = F[10*(9*(9*i+(j-1))+k)+l] + S[10];
-        FS[11] = F[10*(9*(9*i+j)+(k-1))+l] + S[11];
-        FS[12] = F[10*(9*(9*i+(j-1))+(k-1))+l] + S[12];
-        FS[13] = F[10*(9*(9*i+(j-1))+k)+(l-1)] + S[13];
-        FS[14] = F[10*(9*(9*(i-1)+j)+(k-1))+l] + S[14];
+        if(i!=0 && j!=0 && k!=0 && l!=0) {
+            FS[0] = F[10 * (9 * (9 * (i - 1) + (j - 1)) + (k - 1)) + (l - 1)] + S[0];
+        }
+        if(j!=0 && k!=0 && l!=0) {
+            FS[1] = F[10 * (9 * (9 * i + (j - 1)) + (k - 1)) + (l - 1)] + S[1];
+        }
+        if(i!=0 && k!=0 && l!=0) {
+            FS[2] = F[10 * (9 * (9 * (i - 1) + j) + (k - 1)) + (l - 1)] + S[2];
+        }
+        if(j!=0 && i!=0 && l!=0) {
+            FS[3] = F[10 * (9 * (9 * (i - 1) + (j - 1)) + k) + (l - 1)] + S[3];
+        }
+        if(j!=0 && k!=0 && i!=0) {
+            FS[4] = F[10 * (9 * (9 * (i - 1) + (j - 1)) + (k - 1)) + l] + S[4];
+        }
+        if(k!=0 && l!=0) {
+            FS[5] = F[10 * (9 * (9 * i + j) + (k - 1)) + (l - 1)] + S[5];
+        }
+        if(i!=0 && l!=0) {
+            FS[6] = F[10 * (9 * (9 * (i - 1) + j) + k) + (l - 1)] + S[6];
+        }
+        if(i!=0 && j!=0) {
+            FS[7] = F[10 * (9 * (9 * (i - 1) + (j - 1)) + k) + l] + S[7];
+        }
+        if(l!=0) {
+            FS[8] = F[10 * (9 * (9 * i + j) + k) + (l - 1)] + S[8];
+        }
+        if(i!=0) {
+            FS[9] = F[10 * (9 * (9 * (i - 1) + j) + k) + l] + S[9];
+        }
+        if(j!=0) {
+            FS[10] = F[10 * (9 * (9 * i + (j - 1)) + k) + l] + S[10];
+        }
+        if(k!=0) {
+            FS[11] = F[10 * (9 * (9 * i + j) + (k - 1)) + l] + S[11];
+        }
+        if(k!=0 && j!=0) {
+            FS[12] = F[10 * (9 * (9 * i + (j - 1)) + (k - 1)) + l] + S[12];
+        }
+        if(l!=0 && j!=0) {
+            FS[13] = F[10 * (9 * (9 * i + (j - 1)) + k) + (l - 1)] + S[13];
+        }
+        if(i!=0 && k!=0) {
+            FS[14] = F[10 * (9 * (9 * (i - 1) + j) + (k - 1)) + l] + S[14];
+        }
 
         double f =Double.NEGATIVE_INFINITY;
         for(int w=0; w<15; w++){
