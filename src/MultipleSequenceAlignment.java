@@ -11,10 +11,10 @@ public class MultipleSequenceAlignment {
 
 
     private static String[][] sequences = new String[][]{
-            {"A","A","T","T","A","T","G","G"},          //8
-            {"A","C","A","T","T","G","T","T","G"},      //9
-            {"G","C","C","A","G","G","A","G","G"},
-            {"A","A","T","T","T","T","G","A","G","G"}   //10
+            {"A","A","T","T","A","T","G","G"},          //seq length = 8
+            {"A","C","A","T","T","G","T","T","G"},      //seq length = 9
+            {"G","C","C","A","G","G","A","G","G"},      //seq length = 9
+            {"A","A","T","T","T","T","G","A","G","G"}   //seq length = 10
     };
 
     public static void computeScore(){
@@ -28,9 +28,9 @@ public class MultipleSequenceAlignment {
                     for(int l =0; l<10; l++){
 
                         if(i!=0 && j!=0 && k!=0 && l!=0) {
-                            double[] S = MultipleSequenceAlignment.calculateSum(i, j, k, l); //compare the sequences starting from 0
-                            double m = MultipleSequenceAlignment.findMax(S, i, j, k, l);
-                            F[10 * (9 * (9 * i + j) + k) + l] = m;
+                            double[] S = MultipleSequenceAlignment.calculateSum(i, j, k, l); //calculate sum of pairs
+                            double m = MultipleSequenceAlignment.findMax(S, i, j, k, l);    //find max after adding to previous max
+                            F[10 * (9 * (9 * i + j) + k) + l] = m;                          // F[i][j][k][l] = max
                         }
                     }
                 }
@@ -41,7 +41,7 @@ public class MultipleSequenceAlignment {
         System.out.println(F[6479]);
     }
 
-    // Return a list of sum
+    // Return a list of sum of pairs
     public static double[] calculateSum(int i, int j, int k, int l){
 
         double [] S = new double[15];
@@ -50,6 +50,10 @@ public class MultipleSequenceAlignment {
         String x_2 = sequences[1][j];
         String x_3 = sequences[2][k];
         String x_4 = sequences[3][l];
+//        System.out.println(x_1);
+//        System.out.println(x_2);
+//        System.out.println(x_3);
+//        System.out.println(x_4);
 
         S[0] = MultipleSequenceAlignment.sumOfPairs(x_1, x_2, x_3, x_4);
         S[1] = MultipleSequenceAlignment.sumOfPairs("_", x_2, x_3, x_4);
@@ -73,53 +77,55 @@ public class MultipleSequenceAlignment {
     //Return S(x1, x2, x3, x4)
     public static double sumOfPairs(String x1, String x2, String x3, String x4){
         double[] s = new double [6];
-
-            if(x1.equals(x2)){
+//        System.out.println(x1);
+//        System.out.println(x2);
+//        System.out.println(x1.equals(x2));
+            if(x1.equals(x2) && x1!="_"){
                 s[0] = 3;
             }else if(x1.equals("_")||x2.equals("_")){
-                s[0] = -1.5;
+                s[0] = 0-1.5;
             }else{
-                s[0] = -2;
+                s[0] = 0- 2;
             }
 
-            if(x1.equals(x3)){
+            if(x1.equals(x3)&& x1!="_"){
                 s[1] = 3;
             }else if(x1.equals("_")||x3.equals("_")){
-                s[1] = -1.5;
+                s[1] = 0-1.5;
             }else{
-                s[1] = -2;
+                s[1] = 0-2;
             }
 
-        if(x1.equals(x4)){
+        if(x1.equals(x4)&& x1!="_"){
             s[2] = 3;
         }else if(x1.equals("_")||x4.equals("_")){
-            s[2] = -1.5;
+            s[2] = 0-1.5;
         }else{
-            s[2] = -2;
+            s[2] = 0-2;
         }
 
-        if(x2.equals(x3)){
+        if(x2.equals(x3)&& x2!="_"){
             s[3] = 3;
         }else if(x2.equals("_")||x3.equals("_")){
-            s[3] = -1.5;
+            s[3] = 0-1.5;
         }else{
-            s[3] = -2;
+            s[3] = 0-2;
         }
 
-        if(x2.equals(x4)){
+        if(x2.equals(x4)&& x2!="_"){
             s[4] = 3;
         }else if(x2.equals("_")||x4.equals("_")){
-            s[4] = -1.5;
+            s[4] = 0-1.5;
         }else{
-            s[4] = -2;
+            s[4] = 0-2;
         }
 
-        if(x3.equals(x4)){
+        if(x3.equals(x4)&& x3!="_"){
             s[5] = 3;
         }else if(x3.equals("_")||x4.equals("_")){
-            s[5] = -1.5;
+            s[5] = 0-1.5;
         }else{
-            s[5] = -2;
+            s[5] = 0-2;
         }
 
         double sum = 0;
